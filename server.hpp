@@ -7,4 +7,5 @@ public:
     void receiveMSG();
     void sendMSG();
     void test();
+    server(sockaddr_in addr, socklen_t addrlen, int buffer_size):device(addr, addrlen, buffer_size){}
 };

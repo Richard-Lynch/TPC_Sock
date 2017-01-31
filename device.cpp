@@ -7,13 +7,13 @@ void device::writeToSocket(){
     send(Socketfd, Buffer,  Buffer_size, 0);
 }
 
-device::device(struct sockaddr addr, socklen_t addrlen, int buffer_size){
+device::device(sockaddr_in addr, socklen_t addrlen, int buffer_size){
     Addr = addr;
     Addrlen = addrlen;
     Buffer_size = buffer_size;
     Buffer = (char*)malloc(sizeof(char)*Buffer_size);
     Socketfd = socket(AF_INET, SOCK_STREAM, 0);
-    connect(Socketfd, &Addr, Addrlen);
+    connect(Socketfd, &(Addr.sin_addr), Addrlen);
 }
 
 device::~device(){
