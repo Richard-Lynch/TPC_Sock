@@ -8,6 +8,9 @@
 #include <pthread.h>
 #include <time.h>
 #include <stdbool.h>
+#include <sys/socket.h>
+#include "client.hpp"
+#include "server.hpp"
 
 pthread_mutex_t lock;
 
@@ -30,13 +33,13 @@ int main(int argc, char *argv[])
     }
 
 // start clock
-    printf("Starting Clock\n");
-    clock_t start = clock();
+    // printf("Starting Clock\n");
+    // clock_t start = clock();
 
 
 // stop the cock
-    printf("Stoping Clock\n");
-    clock_t tdiff = clock() - start;
+    // printf("Stoping Clock\n");
+    // clock_t tdiff = clock() - start;
 
 // destroy mutex
     pthread_mutex_destroy(&lock);

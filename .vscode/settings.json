@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.sh": "shellscript",
+        "*h*h*h*h*hnew": "cpp",
+        "exception": "cpp",
+        "typeinfo": "cpp"
+    }
+}
